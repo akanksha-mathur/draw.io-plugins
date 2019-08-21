@@ -31,7 +31,7 @@ node.setAttribute('attribute1', 'value1');
                     "ellipse;whiteSpace=wrap;html=1;");
         
           newElement.vertex=!0;
-            newElement.value(node);
+            newElement.setAttribute(node);
           theGraph.setSelectionCell(theGraph.addCell(newElement))
         }
     }, null, null, "Ctrl+Shift+Q");
