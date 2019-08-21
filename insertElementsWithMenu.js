@@ -26,12 +26,12 @@ var node = doc.createElement('MyNode')
 node.setAttribute('label', 'MyLabel');
 node.setAttribute('attribute1', 'value1');
             var parent=graph.insertVertex(graph.getDefaultParent(), null, node, 40, 40, 80, 30);
-          var newElement=new mxCell(parent,
+          var newElement=new mxCell("",
                     new mxGeometry(pos.x, pos.y, 80, 80),
                     "ellipse;whiteSpace=wrap;html=1;");
         
           newElement.vertex=!0;
-            newElement.setAttribute('ell-prop', 'dummy');
+            newElement.value(node);
           theGraph.setSelectionCell(theGraph.addCell(newElement))
         }
     }, null, null, "Ctrl+Shift+Q");
