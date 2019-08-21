@@ -25,7 +25,8 @@ Draw.loadPlugin(function(ui) {
 var node = doc.createElement('MyNode')
 node.setAttribute('label', 'MyLabel');
 node.setAttribute('attribute1', 'value1');
-          var newElement=new mxCell(node,
+            var parent=graph.insertVertex(graph.getDefaultParent(), null, node, 40, 40, 80, 30);
+          var newElement=new mxCell(parent,
                     new mxGeometry(pos.x, pos.y, 80, 80),
                     "ellipse;whiteSpace=wrap;html=1;");
         
