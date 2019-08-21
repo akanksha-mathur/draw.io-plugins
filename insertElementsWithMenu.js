@@ -21,7 +21,11 @@ Draw.loadPlugin(function(ui) {
         var theGraph = ui.editor.graph;
         if(theGraph.isEnabled() && !theGraph.isCellLocked(theGraph.getDefaultParent())){
           var pos=theGraph.getInsertPoint();
-          var newElement=new mxCell("",
+            var doc = mxUtils.createXmlDocument();
+var node = doc.createElement('MyNode')
+node.setAttribute('label', 'MyLabel');
+node.setAttribute('attribute1', 'value1');
+          var newElement=new mxCell(node,
                     new mxGeometry(pos.x, pos.y, 80, 80),
                     "ellipse;whiteSpace=wrap;html=1;");
         
