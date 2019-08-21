@@ -26,6 +26,7 @@ Draw.loadPlugin(function(ui) {
                     "ellipse;whiteSpace=wrap;html=1;");
         
           newElement.vertex=!0;
+            newElement.setAttribute('ell-prop', 'dummy');
           theGraph.setSelectionCell(theGraph.addCell(newElement))
         }
     }, null, null, "Ctrl+Shift+Q");
@@ -41,6 +42,8 @@ Draw.loadPlugin(function(ui) {
                     "text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;overflow=auto");
         
           newElement.vertex=!0;
+            
+            newElement.setAttribute('text-prop', 'dummy');
           theGraph.setSelectionCell(theGraph.addCell(newElement))
         }
     }, null, null, "Ctrl+Shift+T");
